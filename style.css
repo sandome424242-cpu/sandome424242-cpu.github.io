@@ -992,3 +992,40 @@ body{
     animation:none!important;
   }
 }
+
+
+/* v11 four selected works */
+.work-meta{
+  display:grid!important;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:16px;
+}
+.work-title{
+  font-family:"Hachi Maru Pop","Kiwi Maru",sans-serif;
+  font-weight:400;
+  color:#fff;
+  text-align:center;
+  line-height:1.45;
+  text-shadow:1px 0 0 rgba(255,45,156,.42),-1px 0 0 rgba(0,217,255,.34);
+}
+.main-work .work-title{font-size:clamp(16px,2.2vw,25px)}
+.work:not(.main-work) .work-title{font-size:clamp(13px,1.8vw,19px)}
+@media(max-width:900px){
+  .work-meta{grid-template-columns:1fr!important;gap:5px!important}
+  .work-title{text-align:left}
+}
+
+
+/* v12 pinned hero + latest-first archive */
+.latest-first::before{
+  content:"NEWEST ↓";
+  grid-column:1 / -1;
+  justify-self:end;
+  margin-bottom:-14px;
+  font-family:"DotGothic16",monospace;
+  font-size:10px;
+  color:#fff;
+  letter-spacing:.08em;
+  text-shadow:2px 0 0 rgba(255,45,156,.55),-2px 0 0 rgba(0,217,255,.45);
+}
